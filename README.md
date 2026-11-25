@@ -31,8 +31,44 @@
 
 完整操作说明见 [使用说明.md](使用说明.md)。
 
+## 从源码运行（Web 版）
+
+仓库里的源码是桌面版使用的同一套前端与本地服务：一个只依赖 Python 标准库的 HTTP 服务，加上静态页面，没有构建步骤，也不需要第三方库。
+
+```powershell
+git clone https://github.com/skadi985/LoL-Radar.git
+cd LoL-Radar
+.\Start.cmd            # 或 python radar_server.py
+```
+
+启动后浏览器会自动打开本机页面，默认载入 `/api/demo` 的三场演示对局，不连客户端也能看界面。需要 Python 3.10 或更新版本，服务只监听 `127.0.0.1`。
+
+| 参数 / 环境变量 | 说明 |
+| --- | --- |
+| `--port` | 指定端口，默认由系统分配 |
+| `--no-browser` | 启动后不自动打开浏览器 |
+| `--lockfile` | 指定 LeagueClient 的 `lockfile` 完整路径 |
+| `LOL_RADAR_ASSETS` | 英雄素材库目录，其下需有 `champion_assets/` |
+| `LOL_RADAR_LOCKFILE` | 等同于 `--lockfile` |
+
+素材库（英雄图标、载入图、原画与 `heroes.min.json`）体积大且受版权约束，不在仓库内。缺失时界面降级为显示英雄名称，对局数据、雷达图与导出都不受影响；把从 Riot Data Dragon 或客户端缓存整理的素材放进 `assets/champion_assets/` 即可显示海报。
+
+## 目录结构
+
+```
+radar_server.py      本地服务：LCU 连接、战绩归一化、静态资源与导出接口
+public/index.html    页面骨架
+public/app.js        对局选择、个人主页、导入与导出流程
+public/radar.js      八维雷达绘制与动画
+public/style.css     样式
+public/loadout/      符文与召唤师技能图标（含 catalog.json）
+demo.json            演示对局数据
+Start.cmd            Windows 启动脚本
+```
+
 ## 说明
 
 - 软件只读取本机英雄联盟客户端（LCU）能返回的近期对局，最多 20 场；不向任何第三方服务器上传战绩。
+- 仓库里的源码是 Web 版；[Releases](../../releases/latest) 里的 EXE 是同一套前端的桌面封装，额外内置了英雄素材、英雄语音与背景音乐，只想用软件的话下载 EXE 即可。
 - 客户端接口受版本、登录状态或权限影响时，仍可通过「导入 JSON」读取包含选手数据的 LCU / Riot Match-V5 战绩。
 - 本项目与 Riot Games、腾讯无关，英雄联盟相关素材版权归原权利人所有，本工具仅供个人复盘学习使用。

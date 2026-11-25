@@ -1,0 +1,210 @@
+{
+  "spell": {
+    "21": {
+      "name": "屏障",
+      "local": true
+    },
+    "721": {
+      "name": "屏障",
+      "local": true
+    },
+    "716": {
+      "name": "战意激增",
+      "local": true
+    },
+    "1": {
+      "name": "净化",
+      "local": true
+    },
+    "71": {
+      "name": "净化",
+      "local": true
+    },
+    "2202": {
+      "name": "闪现",
+      "local": true
+    },
+    "2201": {
+      "name": "闪人",
+      "local": true
+    },
+    "75": {
+      "name": "洞察",
+      "local": true
+    },
+    "14": {
+      "name": "引燃",
+      "local": true
+    },
+    "714": {
+      "name": "引燃",
+      "local": true
+    },
+    "3": {
+      "name": "虚弱",
+      "local": true
+    },
+    "73": {
+      "name": "虚弱",
+      "local": true
+    },
+    "4": {
+      "name": "闪现",
+      "local": true
+    },
+    "74": {
+      "name": "闪现",
+      "local": true
+    },
+    "705": {
+      "name": "强化要塞",
+      "local": true
+    },
+    "6": {
+      "name": "幽灵疾步",
+      "local": true
+    },
+    "76": {
+      "name": "幽灵疾步",
+      "local": true
+    },
+    "7": {
+      "name": "治疗术",
+      "local": true
+    },
+    "77": {
+      "name": "治疗术",
+      "local": true
+    },
+    "13": {
+      "name": "清晰术",
+      "local": true
+    },
+    "713": {
+      "name": "清晰术",
+      "local": true
+    },
+    "30": {
+      "name": "护驾！",
+      "local": true
+    },
+    "31": {
+      "name": "魄罗投掷",
+      "local": true
+    },
+    "709": {
+      "name": "战争图腾",
+      "local": true
+    },
+    "777": {
+      "name": "重生",
+      "local": true
+    },
+    "11": {
+      "name": "惩戒",
+      "local": true
+    },
+    "711": {
+      "name": "惩戒",
+      "local": true
+    },
+    "39": {
+      "name": "标记",
+      "local": true
+    },
+    "32": {
+      "name": "标记",
+      "local": true
+    },
+    "720": {
+      "name": "晋升",
+      "local": true
+    },
+    "12": {
+      "name": "传送",
+      "local": true
+    },
+    "712": {
+      "name": "传送",
+      "local": true
+    },
+    "54": {
+      "name": "占位",
+      "local": true
+    },
+    "55": {
+      "name": "占位和攻击惩戒",
+      "local": true
+    }
+  },
+  "rune": {
+    "8112": {
+      "name": "电刑",
+      "local": true
+    },
+    "8128": {
+      "name": "黑暗收割",
+      "local": true
+    },
+    "9923": {
+      "name": "丛刃",
+      "local": true
+    },
+    "8351": {
+      "name": "冰川增幅",
+      "local": true
+    },
+    "8360": {
+      "name": "启封的秘籍",
+      "local": true
+    },
+    "8369": {
+      "name": "先攻",
+      "local": true
+    },
+    "8005": {
+      "name": "强攻",
+      "local": true
+    },
+    "8008": {
+      "name": "致命节奏",
+      "local": true
+    },
+    "8021": {
+      "name": "迅捷步法",
+      "local": true
+    },
+    "8010": {
+      "name": "征服者",
+      "local": true
+    },
+    "8437": {
+      "name": "不灭之握",
+      "local": true
+    },
+    "8439": {
+      "name": "余震",
+      "local": true
+    },
+    "8465": {
+      "name": "守护者",
+      "local": true
+    },
+    "8214": {
+      "name": "召唤：艾黎",
+      "local": true
+    },
+    "8229": {
+      "name": "奥术彗星",
+      "local": true
+    },
+    "8230": {
+      "name": "风暴掠袭者的狂涌",
+      "local": true
+    },
+    "8992": {
+      "name": "冥火之触",
+      "local": true
+    }
+  }
+}

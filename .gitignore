@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+*.log
+
+# 本地英雄素材库（体积大、受版权约束，不入库）
+assets/
+LeagueClient/
+
+# 编辑器
+.vscode/
+.idea/
+.DS_Store

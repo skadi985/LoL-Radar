@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>峡谷对位 · LoL Radar</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="top"><div class="shell top-row">
+    <div class="brand"><span class="mark" aria-hidden="true">◈</span> <span>峡谷对位</span></div>
+    <div class="source-indicator"><i></i><span id="source">演示数据</span></div>
+  </div></header>
+  <main class="shell">
+    <section class="intro">
+      <div><h1>战绩雷达</h1><p>选两位选手，对比对局表现。</p></div>
+      <div class="actions">
+        <button id="demo" type="button" class="quiet">演示数据</button>
+        <label class="button" for="upload" tabindex="0" role="button">导入 JSON</label><input id="upload" type="file" accept=".json,application/json" hidden>
+        <button id="sync" class="primary" type="button">同步战绩</button>
+      </div>
+    </section>
+    <p id="message" role="status" class="message" hidden></p>
+    <section class="controls" aria-label="选择对局和选手">
+      <label>分析方式<select id="mode"><option value="single">单场对位</option><option value="aggregate">同位置多场平均</option></select></label>
+      <label id="match-field">选择对局<select id="match"></select></label>
+      <label id="role-field" hidden>选择位置<select id="role"><option value="TOP">上单</option><option value="JUNGLE">打野</option><option value="MIDDLE" selected>中单</option><option value="BOTTOM">下路</option><option value="UTILITY">辅助</option></select></label>
+      <label class="choice a">选手 A<select id="player-a"></select></label>
+      <label class="choice b">选手 B<select id="player-b"></select></label>
+    </section>
+    <div class="arena">
+      <article class="player-card player-a" id="card-a"></article>
+      <section class="chart" aria-labelledby="chart-title">
+        <div class="chart-head"><div><h2 id="chart-title">八维对比</h2><p id="scale">以本场选手为参考</p></div><button type="button" id="replay" class="quiet">↻ 重播</button></div>
+        <div class="plot"><canvas id="radar" aria-label="八维双人雷达图"></canvas></div>
+        <div class="chart-foot"><button type="button" id="png" class="quiet">导出 PNG</button><button type="button" id="video" class="quiet">导出动画</button></div>
+      </section>
+      <article class="player-card player-b" id="card-b"></article>
+    </div>
+    <section class="details">
+      <div class="details-head"><h2>指标明细</h2><p id="sample"></p></div>
+      <table><thead><tr><th scope="col">维度</th><th scope="col" id="column-a">选手 A</th><th scope="col" id="column-b">选手 B</th></tr></thead><tbody id="metrics"></tbody></table>
+      <details><summary>查看计算口径</summary><p id="method"></p></details>
+    </section>
+    <footer>本地战绩分析工具 · 英雄素材 <span id="version"></span> · 非 Riot Games 官方产品</footer>
+  </main>
+  <script type="module" src="/app.js"></script>
+</body>
+</html>
